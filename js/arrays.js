@@ -7,9 +7,14 @@ function get_array_of_digit(){
     return my_array;
 }
 
-function task1()
-{
+function task1(){
     let my_array = get_array_of_digit();
     let summa = my_array.reduce((summa,value)=>(value%2==0)?summa+Math.sqrt(value):summa,0);
     console.log(`Cумма квадратных корней для всех чётных чисел равна ${summa}`);
+}
+
+function task2(){
+    let my_array = get_array_of_digit();
+    let summa = my_array.reduce((summa,value)=>(value>0 && value<10)?summa+value:summa,0);
+    console.log(`Cумма чисел в интеравле (0..10) равна ${summa}`);
 }
